@@ -1,0 +1,119 @@
+@import 'reset.scss';
+@import 'variables.scss';
+
+
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+    margin: 2rem 0;
+    
+
+
+    .container {
+        max-width: 1200px;
+        padding: 2.6rem 1.3rem;
+        margin: 0 auto;
+        display: grid;
+        
+        gap: 1.3rem;
+
+        .card {
+            background-color: $white;
+            color: $dark-grayish-blue;
+            border-radius: 1.3rem;
+            padding: 1.3rem;
+
+            &__violet {
+                background-color: $violet;
+                color: $light-gray;
+            }
+
+            &__grayish--blue {
+                background-color: $dark-grayish-blue;
+                color: $light-gray;
+            }
+
+            &.card__white {
+                background-color: $white;
+                color: $dark-grayish-blue;
+            }
+
+            &__dark--blue {
+                background-color: $dark-blue;
+                color: $light-gray;
+            }
+
+            .card__white {
+                background-color: $gray;
+            }
+
+
+            .card__header {
+                display: flex;
+                align-items: center;
+
+                img {
+                    height: 2.5rem;
+                    width: 2.5rem;
+                    border: 2px solid $gray;
+                    border-radius: 50%;
+
+                }
+
+                img.border-violet {
+                    border: 2px solid $violet;
+                }
+
+                .card__header--info {
+                    margin-left: 1rem;
+
+                    p {
+                        opacity: 0.5;
+                    }
+                }
+            }
+
+            .card__body--info {
+               h4 {
+                    font-size: 1.5rem;
+                    padding-top: 1rem;
+               }
+               p {
+                    font-size: 0.85rem;
+                    opacity: 0.75;
+                    padding-top: 1rem;
+               }
+            }
+
+        }
+
+
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(4,minmax(0,1fr));
+        .card__violet {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        .card__white {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        .card__dark--blue {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+        .card__gray{
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 4;
+            grid-column-end: 5;
+        }
+    }
+    
+}

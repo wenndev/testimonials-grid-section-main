@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: hsl(210deg, 46%, 95%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  margin: 2rem 0;
+}
+body .container {
+  max-width: 1200px;
+  padding: 2.6rem 1.3rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.3rem;
+}
+body .container .card {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(217deg, 19%, 35%);
+  border-radius: 1.3rem;
+  padding: 1.3rem;
+}
+body .container .card__violet {
+  background-color: hsl(263deg, 55%, 52%);
+  color: hsl(210deg, 46%, 95%);
+}
+body .container .card__grayish--blue {
+  background-color: hsl(217deg, 19%, 35%);
+  color: hsl(210deg, 46%, 95%);
+}
+body .container .card.card__white {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(217deg, 19%, 35%);
+}
+body .container .card__dark--blue {
+  background-color: hsl(219deg, 29%, 14%);
+  color: hsl(210deg, 46%, 95%);
+}
+body .container .card .card__white {
+  background-color: hsl(0deg, 0%, 81%);
+}
+body .container .card .card__header {
+  display: flex;
+  align-items: center;
+}
+body .container .card .card__header img {
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 2px solid hsl(0deg, 0%, 81%);
+  border-radius: 50%;
+}
+body .container .card .card__header img.border-violet {
+  border: 2px solid hsl(263deg, 55%, 52%);
+}
+body .container .card .card__header .card__header--info {
+  margin-left: 1rem;
+}
+body .container .card .card__header .card__header--info p {
+  opacity: 0.5;
+}
+body .container .card .card__body--info h4 {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+body .container .card .card__body--info p {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .container .card__violet {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .container .card__white {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .container .card__dark--blue {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+  .container .card__gray {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 5;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
